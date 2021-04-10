@@ -5,17 +5,13 @@ import TaskRow from './taskRow';
 class TaskList extends React.Component {
   render() {
     const rows = [];
-    this.props.tasks.forEach((task, i) => {
+    this.props.tasks.forEach((task) => {
       rows.push(
         <TaskRow name={task.name}
-          elapsedTime={task.elapsedTime}
-          isPaused={task.isPaused}
-          isDone={task.isDone}
-          onTogglePause={() => this.props.onTogglePause(i)} />
+          isDone={task.isDone} />
       );
     });
-
-
+    
     return (
       <table>
         <thead>

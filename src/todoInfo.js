@@ -7,7 +7,7 @@ class TodoInfo extends React.Component {
 
     return (
       <div>
-        <h2>TODO:</h2>
+        <p>TODO:</p>
         <p>{numTasks} task{numTasks === 1 ? '' : 's'}</p>
         <ul>
           <li>{numTasks} not started</li>
