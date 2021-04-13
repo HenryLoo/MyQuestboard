@@ -4,9 +4,9 @@ import './taskRow.css';
 class TaskRow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {'seconds': 0, 'isPaused': true}
 
     this.handleTogglePause = this.handleTogglePause.bind(this);
+    this.handleToggleDone = this.handleToggleDone.bind(this);
     this.formatTime = this.formatTime.bind(this);
   }
 
@@ -30,40 +30,40 @@ class TaskRow extends React.Component {
     return hours + ':' + minutes + ':' + seconds;
   }
 
-  tickSeconds() {
-    this.setState(prevState => ({
-      'seconds': prevState.seconds + 1
-    }));
-  }
-
   handleTogglePause() {
-    if (!this.state.isPaused) {
+    if (!this.props.isPaused) {
       clearInterval(this.interval);
     }
     else {
-      this.interval = setInterval(() => this.tickSeconds(), 1000);
+      this.interval = setInterval(() => this.props.tick(), 1000);
     }
 
-    this.setState(prevState => ({
-      'isPaused': !prevState.isPaused
-    }));
+    this.props.onTogglePause();
+  }
+
+  handleToggleDone() {
+    if (!this.props.isPaused) {
+      this.handleTogglePause();
+    }
+
+    this.props.onToggleDone();
   }
 
   render() {
-    const buttonLabel = this.state.isPaused ?
+    const buttonLabel = this.props.isPaused ?
       'START' :
       'PAUSE';
 
-    const time = this.state.seconds === 0 ?
+    const time = this.props.seconds === 0 && this.props.isPaused ?
       'Not started' :
-      this.formatTime(this.state.seconds);
+      this.formatTime(this.props.seconds);
 
     return (
       <tr>
-        <td>{this.props.name}</td>
-        <td>{time}</td>
-        <td><button onClick={this.handleTogglePause}>{buttonLabel}</button></td>
-        <td><input type="checkbox" /></td>
+        <td><span className={this.props.isDone ? 'done' : 'notDone'}>{this.props.name}</span></td>
+        <td><span className={this.props.isPaused ? 'paused' : 'notPaused'}>{time}</span></td>
+        <td><button onClick={this.handleTogglePause} disabled={this.props.isDone ? 'disabled' : ''}>{buttonLabel}</button></td>
+          <td><input type="checkbox" checked={this.props.isDone ? 'checked' : ''} onChange={this.handleToggleDone}/></td>
       </tr>
     );
   }
