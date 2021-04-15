@@ -1,0 +1,37 @@
+.taskList {
+  overflow-x: auto;
+}
+
+.taskList table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #c7c7c7;
+}
+
+.taskList td, .taskList th {
+  border-bottom: 1px solid #c7c7c7;
+  padding: 8px;
+}
+
+.taskList th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #000a12;
+}
+
+.taskList tr:nth-child(even) {
+  background-color: #263238;
+}
+
+.taskList tr:nth-child(odd) {
+  background-color: #4f5b62;
+}
+
+.taskList tr:hover {
+  background-color: #01579b;
+}
+
+.taskList tr.done {
+  background-color: #303035;
+}

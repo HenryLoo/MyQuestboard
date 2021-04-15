@@ -1,0 +1,21 @@
+.taskInput {
+  width: 100%;
+  height: 25px;
+  position: relative;
+}
+
+.taskInput input.bar {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+.taskInput input.add {
+  position: absolute;
+  display: inline-block;
+  width: 25px;
+  height: 100%;
+  right: 0;
+}

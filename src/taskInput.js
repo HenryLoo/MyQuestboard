@@ -25,10 +25,12 @@ class TaskInput extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" placeholder="New task name..." value={this.state.taskName} onChange={this.handleChange} />
-        <input type="submit" value="+"/>
-      </form>
+      <div className="taskInput">
+        <form onSubmit={this.handleSubmit}>
+          <input className="bar dark" type="text" placeholder="New task name..." value={this.state.taskName} onChange={this.handleChange} />
+          <input className="add dark" type="submit" value="+"/>
+        </form>
+      </div>
     );
   }
 }

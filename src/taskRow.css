@@ -1,7 +1,16 @@
-span.done {
+.taskRow span.done {
   text-decoration: line-through;
 }
 
-span.paused {
+.taskRow span.paused {
   font-style: italic;
+}
+
+.taskRow button {
+  background-color: #000a12;
+  width: 5em;
+}
+
+.taskRow button:disabled {
+  background-color: #464650;
 }

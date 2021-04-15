@@ -53,15 +53,25 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <p>Daily Questboard</p>
-          <TodoInfo tasks={this.state.tasks}/>
+        <header className="App-header dark">
+          <h1>Daily Questboard</h1>
         </header>
-        <TaskInput onAddTask={this.handleAddTask} />
-        <TaskList tasks={this.state.tasks}
-          onTogglePause={this.handleTogglePause}
-          onToggleDone={this.handleToggleDone}
-          tick={this.tick} />
+        <div className="row">
+          <div className="col-2">
+              <div className="panel light">
+              <TodoInfo tasks={this.state.tasks}/>
+              <TaskInput onAddTask={this.handleAddTask} />
+            </div>
+          </div>
+          <div className="col-10">
+            <div className="panel light">
+              <TaskList tasks={this.state.tasks}
+                onTogglePause={this.handleTogglePause}
+                onToggleDone={this.handleToggleDone}
+                tick={this.tick} />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

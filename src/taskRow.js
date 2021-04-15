@@ -59,9 +59,9 @@ class TaskRow extends React.Component {
       this.formatTime(this.props.seconds);
 
     return (
-      <tr>
-        <td><span className={this.props.isDone ? 'done' : 'notDone'}>{this.props.name}</span></td>
-        <td><span className={this.props.isPaused ? 'paused' : 'notPaused'}>{time}</span></td>
+      <tr className={this.props.isDone ? 'taskRow done' : 'taskRow'}>
+        <td><span className={this.props.isDone ? 'done' : ''}>{this.props.name}</span></td>
+        <td><span className={this.props.isPaused ? 'paused' : ''}>{time}</span></td>
         <td><button onClick={this.handleTogglePause} disabled={this.props.isDone ? 'disabled' : ''}>{buttonLabel}</button></td>
           <td><input type="checkbox" checked={this.props.isDone ? 'checked' : ''} onChange={this.handleToggleDone}/></td>
       </tr>

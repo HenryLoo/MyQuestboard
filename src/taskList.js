@@ -19,17 +19,19 @@ class TaskList extends React.Component {
     });
 
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>Task</th>
-            <th>Elapsed time</th>
-            <th>Timer</th>
-            <th>Done?</th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </table>
+      <div className="taskList">
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Elapsed time</th>
+              <th>Timer</th>
+              <th>Done?</th>
+            </tr>
+          </thead>
+          <tbody>{rows}</tbody>
+        </table>
+      </div>
     );
   }
 }

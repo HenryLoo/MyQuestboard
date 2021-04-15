@@ -10,8 +10,8 @@ class TodoInfo extends React.Component {
     const numDone = this.props.tasks.reduce((count, item) => item.isDone ? ++count : count, 0);
 
     return (
-      <div>
-        <p>TODO:</p>
+      <div className="todoInfo">
+        <span className="label">TODO:</span>
         <p>{numTasks} task{numTasks === 1 ? '' : 's'}</p>
         <ul>
           <li>{numTasks - numInProgress - numDone} in backlog</li>
