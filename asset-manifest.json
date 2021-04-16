@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/MyQuestboard/static/css/main.93c9cef5.chunk.css",
+    "main.js": "/MyQuestboard/static/js/main.8ee6c3b1.chunk.js",
+    "main.js.map": "/MyQuestboard/static/js/main.8ee6c3b1.chunk.js.map",
+    "runtime-main.js": "/MyQuestboard/static/js/runtime-main.5514ccc9.js",
+    "runtime-main.js.map": "/MyQuestboard/static/js/runtime-main.5514ccc9.js.map",
+    "static/js/2.c2e4eda5.chunk.js": "/MyQuestboard/static/js/2.c2e4eda5.chunk.js",
+    "static/js/2.c2e4eda5.chunk.js.map": "/MyQuestboard/static/js/2.c2e4eda5.chunk.js.map",
+    "static/js/3.c91c5dc5.chunk.js": "/MyQuestboard/static/js/3.c91c5dc5.chunk.js",
+    "static/js/3.c91c5dc5.chunk.js.map": "/MyQuestboard/static/js/3.c91c5dc5.chunk.js.map",
+    "index.html": "/MyQuestboard/index.html",
+    "static/css/main.93c9cef5.chunk.css.map": "/MyQuestboard/static/css/main.93c9cef5.chunk.css.map",
+    "static/js/2.c2e4eda5.chunk.js.LICENSE.txt": "/MyQuestboard/static/js/2.c2e4eda5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5514ccc9.js",
+    "static/js/2.c2e4eda5.chunk.js",
+    "static/css/main.93c9cef5.chunk.css",
+    "static/js/main.8ee6c3b1.chunk.js"
+  ]
+}
